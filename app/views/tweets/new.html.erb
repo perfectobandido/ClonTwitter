@@ -1,10 +1,9 @@
-<h1>New tweet</h1>
-# render es como incrustar _form.html.erb render "form" le dice agregar _form.html.rb
-# render "nav" le dice agregar _nav.html.rb
+<h1>Nuevo tweet</h1>
+
 <%= render "form", tweet: @tweet %>
 
 <br>
 
 <div>
-  <%= link_to "Back to tweets", tweets_path %>
+  <%= link_to "volver a los tweets", tweets_path %>
 </div>

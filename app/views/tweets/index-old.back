@@ -14,3 +14,8 @@
 # <%= link_to 'Nuevo Tweet', new_tweet_path %>
 
 # <%= link_to "New tweet", new_tweet_path %>
+
+
+
+# render es como incrustar _form.html.erb render "form" le dice agregar _form.html.rb
+# render "nav" le dice agregar _nav.html.rb
