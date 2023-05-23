@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p> # aca aparece el mensaje
+
+<h1>Tweets</h1>
+
+<div id="tweets">
+  <% @tweets.each do |tweet| %>
+    <%= render tweet %>
+    <p>
+      <%= link_to "Show this tweet", tweet %>
+    </p>
+  <% end %>
+</div>
+
+# <%= link_to 'Nuevo Tweet', new_tweet_path %>
+
+# <%= link_to "New tweet", new_tweet_path %>
