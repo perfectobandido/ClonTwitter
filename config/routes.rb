@@ -4,5 +4,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  
+  get '/tweets/search', to: 'tweets#search', as: 'search_tweets'
+
+
   root 'tweets#index'
 end

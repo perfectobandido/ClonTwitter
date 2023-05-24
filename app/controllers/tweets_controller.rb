@@ -1,11 +1,21 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: %i[ show edit update destroy ]
 
+
+  def search
+    @query = params[:query]
+    @tweets = Tweet.where("description ILIKE ?", "%#{@query}%")
+  end
+  
+  
   # GET /tweets or /tweets.json
   def index
-    #@tweets = Tweet.all
-    @tweets = Tweet.order(created_at: :desc).paginate(page: params[:page], per_page: 8)
+    @tweets = Tweet.all
+    @tweets = @tweets.where("description ILIKE ?", "%#{params[:query]}%") if params[:query].present?
+    @tweets = @tweets.paginate(page: params[:page], per_page: 10)
   end
+  
+  
 
   # GET /tweets/1 or /tweets/1.json
   def show
