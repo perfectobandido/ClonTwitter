@@ -1,5 +1,6 @@
 <p style="color: green"><%= notice %></p> # aca aparece el mensaje
 
+
 <h1>Tweets</h1>
 
 <div id="tweets">
