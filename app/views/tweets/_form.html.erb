@@ -11,19 +11,29 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :"descripción", style: "display: block" %>
-    <%= form.text_area :description, rows: 5, cols: 60 %>
-  </div>
 
-  <div>
+  <div class="card" style="width: 32rem;">
+  <div class="card-body">
+    <p class="card-text">
+    <div>
+      <%= form.label :"descripción", style: "display: block" %>
+      <%= form.text_area :description, rows: 5, cols: 60 %>
+      </div>
+    </p>
+    <div>
     <%= form.label :"nombre del usuario", style: "display: block" %>
     <%= form.text_field :user_name, size: 40 %>
+    </div>
+
   </div>
+</div>
+
+  
+  
   <br>
   <div>
    
-    <%= form.button "Actualizar Tweet", class: "btn btn-primary mb-3" %>
+    <%= form.button "Guardar Tweet", class: "btn btn-primary mb-3" %>
 
   </div>
 <% end %>
