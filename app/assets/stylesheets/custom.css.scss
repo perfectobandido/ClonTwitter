@@ -1,0 +1,24 @@
+/* Custom styles for the fixed navbar */
+
+.navbar {
+    background-color: #00bcd4; /* Color celeste */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  .navbar-brand {
+    padding: 10px;
+  }
+  
+  .navbar-brand img {
+    height: 30px; /* Altura del logo */
+  }
+  .navbar-title {
+    color: #fff;
+    font-size: 24px; /* Tamaño de la fuente */
+    margin: 0;
+    line-height: 50px; /* Altura de la barra de navegación */
+  }
