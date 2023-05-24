@@ -1,7 +1,7 @@
 <%= form_with(model: tweet) do |form| %>
   <% if tweet.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(tweet.errors.count, "error") %> prohibido que se guarde este tweet:</h2>
+      <h2><%= pluralize(tweet.errors.count, "error") %> no se puede grabar este este tweet:</h2>
 
       <ul>
         <% tweet.errors.each do |error| %>
@@ -20,8 +20,10 @@
     <%= form.label :"nombre del usuario", style: "display: block" %>
     <%= form.text_field :user_name, size: 40 %>
   </div>
-
+  <br>
   <div>
-    <%= form.submit %>
+   
+    <%= form.button "Actualizar Tweet", class: "btn btn-primary mb-3" %>
+
   </div>
 <% end %>
